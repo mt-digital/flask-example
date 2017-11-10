@@ -1,3 +1,6 @@
+import json
+import uuid
+
 from flask import Flask, jsonify, render_template, request
 
 
@@ -26,6 +29,16 @@ def index():
 def print_post():
 
     print(request.form)
+    dictionaryString = json.dumps(request.form)
+    print(type(dictionaryString))
+    print(dictionaryString)
+
+    # not making a new filename every time
+    # open('test-save-request.json', 'w').write(json.dumps(request.form))
+
+    # New filename every time.
+    filename = str(uuid.uuid4()) + '.json'
+    open(filename, 'w').write(json.dumps(request.form))
 
     return jsonify({"message": "successfully posted"})
 
