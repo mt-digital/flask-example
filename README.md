@@ -1,6 +1,12 @@
-# example-http-request
+# flask-example
 
-This repository contains examples of HTTP requests using jQuery on the frontend and a Flask server on the backend.
+This repository contains examples of HTTP requests and browser/Python programming basics using jQuery on the frontend and a Flask server on the backend.
+
+## Python programming
+
+Please see [files_example.py](/files_example.py) for some basic directory and file creation, checking, and writing.
+
+## Requests
 
 The GET request is straightforward. 
 
